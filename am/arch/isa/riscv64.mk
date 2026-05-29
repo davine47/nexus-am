@@ -3,7 +3,7 @@ MARCH ?= rv64gc
 ifeq ($(LINUX_GNU_TOOLCHAIN),1)
 CROSS_COMPILE := riscv64-linux-gnu-
 else
-CROSS_COMPILE := riscv64-unknown-linux-gnu-
+CROSS_COMPILE := riscv64-unknown-elf-
 endif
 
 COMMON_FLAGS  := -fno-pic -march=$(MARCH) -mcmodel=medany
